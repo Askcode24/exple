@@ -1,0 +1,226 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #555252;
+	font-family: sans-serif;
+}
+.caption {
+	position: absolute;
+	bottom: 20px;
+	left: 30px;
+	color: white;
+	background: rgba(0, 0, 0, 0.6);
+	padding: 10px 20px;
+	border-radius: 8px;
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+.carousel-dots {
+	text-align: center;
+	margin-top: 15px;
+}
+
+.dot {
+	height: 12px;
+	width: 12px;
+	margin: 0 6px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background 0.3s;
+	cursor: pointer;
+}
+
+.dot.active {
+	background-color: #333;
+}
+
+.carousel-container {
+	position: relative;
+	max-width: 100%;
+	margin: auto;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.carousel-track-container {
+	overflow: hidden;
+	width: 100%;
+}
+
+.carousel-track {
+	display: flex;
+	transition: transform 0.6s ease-in-out;
+	list-style: none;
+	padding: 0 30px;
+	gap: 30px;
+}
+
+.carousel-slide {
+	flex: 0 0 100%;
+	position: relative;
+	/* min-width: 100%; 
+	flex-shrink: 0;
+	padding: 0 15px; 
+	box-sizing: border-box; */
+}
+
+.carousel-slide img {
+	width: 100%;
+	height: 90vh;
+	display: block;
+	margin: 10px auto;
+	object-fit: cover;
+	border-radius: 10px;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(0, 0, 0, 0.4);
+	border: none;
+	border-radius: 35px;
+	font-size: 2rem;
+	color: white;
+	padding: 0.7rem 1.5rem;
+	cursor: pointer;
+	z-index: 10;
+	transition: background 0.3s;
+}
+
+.carousel-button:hover {
+	background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button.prev {
+	left: 10px;
+}
+
+.carousel-button.next {
+	right: 10px;
+}
+
+@media (max-width: 1280px) {
+	.carousel-container {
+		margin: 70px auto;
+	}
+	.carousel-slide img {
+		height: 80vh;
+	}
+
+	.caption {
+		font-size: 1.5rem;
+		padding: 8px 10px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.carousel-container {
+		margin: 140px auto;
+	}
+	.carousel-slide img {
+		height: 70vh;
+	}
+}
+
+@media (max-width: 768px) {
+	.carousel-container {
+		margin: 140px auto;
+	}
+	.carousel-slide img {
+		height: 60vh;
+	}
+
+	.carousel-button {
+		font-size: 24px;
+		padding: 8px 12px;
+	}
+
+	.caption {
+		font-size: 16px;
+		padding: 8px 10px;
+	}
+}
+
+@media (max-width: 480px) {
+	.carousel-container {
+		margin: 120px auto;
+	}
+	.carousel-slide img {
+		height: 50vh;
+	}
+
+	.carousel-button {
+		font-size: 18px;
+		padding: 6px 10px;
+	}
+
+	.carousel-dots {
+		bottom: 10px;
+		gap: 6px;
+	}
+
+	.dot {
+		width: 8px;
+		height: 8px;
+	}
+}
+
+@media (max-width: 320px) {
+	.carousel-container {
+		margin: 100px auto;
+	}
+	.carousel-slide img {
+		height: 50vh;
+	}
+
+	.carousel-button {
+		font-size: 18px;
+		padding: 6px 10px;
+	}
+
+	.carousel-dots {
+		bottom: 10px;
+		gap: 6px;
+	}
+
+	.dot {
+		width: 8px;
+		height: 8px;
+	}
+}
+
+@media (max-width: 162px) {
+	.carousel-container {
+		margin: 15px auto;
+	}
+	.carousel-slide img {
+		height: 50vh;
+	}
+
+	.carousel-button {
+		font-size: 18px;
+		padding: 6px 10px;
+		margin-inline: -12px;
+	}
+
+	.carousel-dots {
+		bottom: 10px;
+		gap: 6px;
+	}
+
+	.dot {
+		width: 8px;
+		height: 8px;
+	}
+	.caption {
+		display: none;
+	}
+}
