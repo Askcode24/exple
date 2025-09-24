@@ -8,7 +8,7 @@ let currentSlide = 0;
 let autoSlideTimeout;
 
 function updateSlide(index) {
-	const slideWidth = slides[0].offsetWidth + 30;
+	const slideWidth = slides[0].offsetWidth + 150;
 	track.style.transform = `translateX(-${slideWidth * index}px)`;
 	currentSlide = index;
 
